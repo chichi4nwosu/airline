@@ -40,7 +40,45 @@ public class Graph implements AirlineGraph {
             e.printStackTrace();
         }
     }
+/*
+    initializeGraphFromFile("connections.dat");
+    }
 
+    private void initializeGraphFromFile(String filename) {
+        try {
+            Scanner scanner = new Scanner(new File(filename));
+            for (int row = 0; row < SIZE; row++) {
+                for (int col = 0; col < SIZE && scanner.hasNextInt(); col++) {
+                    graph[row][col] = scanner.nextInt();
+                }
+            }
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+initializeGraphFromFile("connections.dat");
+    }
+
+    private void initializeGraphFromFile(String filename) {
+        try {
+            Scanner scanner = new Scanner(new File(filename));
+            for (int row = 0; row < AirlineGraph.SIZE; row++) {
+                for (int col = 0; col < AirlineGraph.SIZE; col++) {
+                    if (scanner.hasNextInt()) {
+                        graph[row][col] = scanner.nextInt();
+                    }
+                }
+            }
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+    
+*/
     private int findAirportCode(String airportCode) {
         for (int i = 0; i < AirlineGraph.SIZE; i++) {
             if (AirlineGraph.airportCode[i].equals(airportCode)) {
